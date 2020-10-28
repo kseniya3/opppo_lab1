@@ -1,0 +1,51 @@
+﻿[
+  {
+    "type": "Truck",
+    "capacity": 3343,
+    "power": 232,
+    "country": "England",
+     "id": 1
+  },
+  {
+    "type": "Bus",
+    "capacity": 435,
+    "power": 987,
+    "country": "Korea",
+    "id": 2
+  },
+  {
+    "type": "Truck",
+    "capacity": 3435,
+    "power": 233,
+    "country": "Russia",
+    "id": 3
+  },
+  {
+    "type": "Truck",
+    "capacity": 6767,
+    "power": 2323,
+    "country": "Japan",
+    "id": 4
+  },
+  {
+    "type": "Bus",
+    "capacity": 12,
+    "power": 4343,
+    "country": "Korea",
+    "id": 5
+  },
+  {
+    "type": "Bus",
+    "capacity": 9797,
+    "power": 45,
+    "country": "Japan",
+    "id": 6
+  },
+  {
+    "type": "Truck",
+    "capacity": 3434,
+    "power": 92387,
+    "country": "Russia",
+    "id": 7
+  }
+]
