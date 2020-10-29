@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OPPP_lb1
 {
+    /// <summary>
+    /// Класс элемента односвязного списка
+    /// </summary>
     class Node
     {
         public Node next { get; set; }

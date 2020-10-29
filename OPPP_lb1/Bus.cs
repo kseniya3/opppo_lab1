@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OPPP_lb1
 {
+    /// <summary>
+    /// Наследуемый класс -> Автобус
+    /// </summary>
     class Bus : Field
     {
         public int num { get; private set; }

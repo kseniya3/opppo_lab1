@@ -10,12 +10,19 @@ using System.Runtime.CompilerServices;
 
 namespace OPPP_lb1
 {
+    /// <summary>
+    /// Класс реализующий односвязный список
+    /// </summary>
     class List
     {
         private Node head;
         private Node tail;
         public int count { get; private set; }
 
+        /// <summary>
+        /// Функция добавления в односвязный список
+        /// </summary>
+        /// <param name="value"></param>
         public void Add(Field value)
         {
             if (value == null){
@@ -36,6 +43,11 @@ namespace OPPP_lb1
             count++;
         }
 
+        /// <summary>
+        /// Функция для работы с json токеном
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         static public Field jsonfield(JToken item)
         {
             string type = "";
@@ -79,6 +91,9 @@ namespace OPPP_lb1
             return null;
         }
 
+        /// <summary>
+        /// Функция для отображения листа
+        /// </summary>
         public void Show()
         {
             Console.WriteLine("---------------------------------------");
@@ -105,6 +120,10 @@ namespace OPPP_lb1
             Console.WriteLine("---------------------------------------");
         }
 
+        /// <summary>
+        /// Функция чтения данных из файла и парсинга в массив.
+        /// </summary>
+        /// <param name="path"></param>
         public void addDataFromFile(string path)
         {
             var array = JArray.Parse(File.ReadAllText(path));

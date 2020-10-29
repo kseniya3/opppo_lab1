@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OPPP_lb1</name>
+    </assembly>
+    <members>
+        <member name="T:OPPP_lb1.Bus">
+            <summary>
+            Наследуемый класс -> Автобус
+            </summary>
+        </member>
+        <member name="T:OPPP_lb1.Field">
+            <summary>
+            Обобщающий класс. Класс содержимого элемента односвязного списка
+            </summary>
+        </member>
+        <member name="T:OPPP_lb1.List">
+            <summary>
+            Класс реализующий односвязный список
+            </summary>
+        </member>
+        <member name="M:OPPP_lb1.List.Add(OPPP_lb1.Field)">
+            <summary>
+            Функция добавления в односвязный список
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:OPPP_lb1.List.jsonfield(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Функция для работы с json токеном
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OPPP_lb1.List.Show">
+            <summary>
+            Функция для отображения листа
+            </summary>
+        </member>
+        <member name="M:OPPP_lb1.List.addDataFromFile(System.String)">
+            <summary>
+            Функция чтения данных из файла и парсинга в массив.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="T:OPPP_lb1.Node">
+            <summary>
+            Класс элемента односвязного списка
+            </summary>
+        </member>
+        <member name="T:OPPP_lb1.Truck">
+            <summary>
+            Наследуемый класс -> Транспорт
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OPPP_lb1
 {
+    /// <summary>
+    /// Обобщающий класс. Класс содержимого элемента односвязного списка
+    /// </summary>
     public class Field
     {
         public string capacity { get; private set; }
@@ -19,7 +22,7 @@ namespace OPPP_lb1
             country = Country;
         }
 
-        public virtual void Show(int idx)
+        public virtual void Show(int id)
         {
             
         }
