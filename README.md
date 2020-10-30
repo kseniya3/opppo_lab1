@@ -2,7 +2,7 @@
 Organization of the software design process. Read objects and display content on screen.
 
 <a name='assembly'></a>
-# OPPP_lb1
+# Documentation
 
 ## Contents
 
