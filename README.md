@@ -3,7 +3,7 @@ Organization of the software design process. Read objects and display content on
 
 <a name='assembly'></a>
 # UML Diagram
-(https://github.com/kseniya3/opppo_lab1/blob/main/OPPP_lb1/Documentation/Uml.png)
+![alt text](https://github.com/kseniya3/opppo_lab1/blob/main/OPPP_lb1/Documentation/Uml.png)
 
 <a name='assembly'></a>
 # Documentation
