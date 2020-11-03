@@ -44,54 +44,6 @@ namespace OPPP_lb1
         }
 
         /// <summary>
-        /// Функция для работы с json токеном
-        /// </summary>
-        /// <param name="item"></param>
-        /// <returns></returns>
-        static public Field jsonfield(JToken item)
-        {
-            string type = "";
-            try{
-                type = item["type"].ToString();
-            }
-            catch{
-                throw new Exception("wrong type");
-            }
-
-            if (type == "Truck"){
-
-                try{
-                    return new Truck(
-                        item["capacity"].ToString(), 
-                        item["power"].ToString(), 
-                        item["country"].ToString(), 
-                        Int32.Parse(item["id"].ToString())
-                        );
-                }
-                catch{
-                    throw new Exception("wrong cycle item");
-                }
-            }
-
-            if (type == "Bus"){
-
-                try{
-                    return new Bus(
-                        item["capacity"].ToString(),
-                        item["power"].ToString(),
-                        item["country"].ToString(),
-                        Int32.Parse(item["id"].ToString())
-                        );
-                }
-                catch{
-                    throw new Exception("wrong cycle item");
-                }
-            }
-
-            return null;
-        }
-
-        /// <summary>
         /// Функция для отображения листа
         /// </summary>
         public void Show()
@@ -130,7 +82,7 @@ namespace OPPP_lb1
 
             foreach (var item in array){
 
-                Field field = jsonfield(item);
+                Field field = Jsonfield.jsonfield(item);
                 Add(field);
             }
         }

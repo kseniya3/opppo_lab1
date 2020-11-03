@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Bus.cs" />
     <Compile Include="Field.cs" />
+    <Compile Include="Jsonfield.cs" />
     <Compile Include="List.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
