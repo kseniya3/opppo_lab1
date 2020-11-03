@@ -1,5 +1,13 @@
 # opppo_lab1
+
 Organization of the software design process. Read objects and display content on screen.
+
+## Script(python) creation fake data. 
+
+Requirements:
+  1. python
+  2. Install library: pip install pycountry
+  3. Start script: python createJsonData.py --type [argument] --range_int_min [argument] --range_int_max [argument] --count [argument]
 
 <a name='assembly'></a>
 # UML Diagram
