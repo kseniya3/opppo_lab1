@@ -26,7 +26,8 @@ namespace OPPP_lb1
         public void Add(Field value)
         {
             if (value == null){
-                throw new Exception("null value");
+                return;
+               //throw new Exception("null value");
             }
 
             if (head == null){
@@ -41,54 +42,6 @@ namespace OPPP_lb1
                 tail.next = head;
             }
             count++;
-        }
-
-        /// <summary>
-        /// Функция для работы с json токеном
-        /// </summary>
-        /// <param name="item"></param>
-        /// <returns></returns>
-        static public Field jsonfield(JToken item)
-        {
-            string type = "";
-            try{
-                type = item["type"].ToString();
-            }
-            catch{
-                throw new Exception("wrong type");
-            }
-
-            if (type == "Truck"){
-
-                try{
-                    return new Truck(
-                        item["capacity"].ToString(), 
-                        item["power"].ToString(), 
-                        item["country"].ToString(), 
-                        Int32.Parse(item["id"].ToString())
-                        );
-                }
-                catch{
-                    throw new Exception("wrong cycle item");
-                }
-            }
-
-            if (type == "Bus"){
-
-                try{
-                    return new Bus(
-                        item["capacity"].ToString(),
-                        item["power"].ToString(),
-                        item["country"].ToString(),
-                        Int32.Parse(item["id"].ToString())
-                        );
-                }
-                catch{
-                    throw new Exception("wrong cycle item");
-                }
-            }
-
-            return null;
         }
 
         /// <summary>
@@ -107,13 +60,19 @@ namespace OPPP_lb1
             while (temp > 0){
                 //TODO: Вынести вывод информации в поле(Field)
                 //TODO: Выводить имя сущности.
+
+
+                /*
                 Console.WriteLine(
                     "Type_Name: " +
                     "Number: " + temp + " " +
                     "Capacity: " + tempHead.field.capacity + " " +
                     "Power: " + tempHead.field.power + " " +
                     "Country: " + tempHead.field.country + " ");
+                */
 
+                //tempHead.field.Show(count - temp);
+                tempHead.field.Show(tempHead.field.id);
                 tempHead = tempHead.next;
                 temp--;
             }
@@ -130,7 +89,7 @@ namespace OPPP_lb1
 
             foreach (var item in array){
 
-                Field field = jsonfield(item);
+                Field field = Jsonfield.jsonfield(item);
                 Add(field);
             }
         }

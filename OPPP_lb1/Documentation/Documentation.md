@@ -5,11 +5,12 @@
 
 - [Bus](#T-OPPP_lb1-Bus 'OPPP_lb1.Bus')
 - [Field](#T-OPPP_lb1-Field 'OPPP_lb1.Field')
+- [Jsonfield](#T-OPPP_lb1-Jsonfield 'OPPP_lb1.Jsonfield')
+  - [jsonfield(item)](#M-OPPP_lb1-Jsonfield-jsonfield-Newtonsoft-Json-Linq-JToken- 'OPPP_lb1.Jsonfield.jsonfield(Newtonsoft.Json.Linq.JToken)')
 - [List](#T-OPPP_lb1-List 'OPPP_lb1.List')
   - [Add(value)](#M-OPPP_lb1-List-Add-OPPP_lb1-Field- 'OPPP_lb1.List.Add(OPPP_lb1.Field)')
   - [Show()](#M-OPPP_lb1-List-Show 'OPPP_lb1.List.Show')
   - [addDataFromFile(path)](#M-OPPP_lb1-List-addDataFromFile-System-String- 'OPPP_lb1.List.addDataFromFile(System.String)')
-  - [jsonfield(item)](#M-OPPP_lb1-List-jsonfield-Newtonsoft-Json-Linq-JToken- 'OPPP_lb1.List.jsonfield(Newtonsoft.Json.Linq.JToken)')
 - [Node](#T-OPPP_lb1-Node 'OPPP_lb1.Node')
 - [Truck](#T-OPPP_lb1-Truck 'OPPP_lb1.Truck')
 
@@ -34,6 +35,30 @@ OPPP_lb1
 ##### Summary
 
 Обобщающий класс. Класс содержимого элемента односвязного списка
+
+<a name='T-OPPP_lb1-Jsonfield'></a>
+## Jsonfield `type`
+
+##### Namespace
+
+OPPP_lb1
+
+<a name='M-OPPP_lb1-Jsonfield-jsonfield-Newtonsoft-Json-Linq-JToken-'></a>
+### jsonfield(item) `method`
+
+##### Summary
+
+Функция для работы с json токеном
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| item | [Newtonsoft.Json.Linq.JToken](#T-Newtonsoft-Json-Linq-JToken 'Newtonsoft.Json.Linq.JToken') |  |
 
 <a name='T-OPPP_lb1-List'></a>
 ## List `type`
@@ -82,23 +107,6 @@ This method has no parameters.
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
-
-<a name='M-OPPP_lb1-List-jsonfield-Newtonsoft-Json-Linq-JToken-'></a>
-### jsonfield(item) `method`
-
-##### Summary
-
-Функция для работы с json токеном
-
-##### Returns
-
-
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| item | [Newtonsoft.Json.Linq.JToken](#T-Newtonsoft-Json-Linq-JToken 'Newtonsoft.Json.Linq.JToken') |  |
 
 <a name='T-OPPP_lb1-Node'></a>
 ## Node `type`

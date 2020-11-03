@@ -11,15 +11,22 @@ namespace OPPP_lb1
     /// </summary>
     class Bus : Field
     {
-        public int num { get; private set; }
+        public string capacity_people { get; private set; }
 
-        public Bus(string capacity, string power, string country, int Num) : base(capacity, power, country)
+        public Bus(int id, string type, string power, string country, string capacity_fuel, string Capacity_people) 
+            : base(id, type, power, country, capacity_fuel)
         {
-            num = Num;
+            capacity_people = Capacity_people;
         }
         public override void Show(int id)
         {
-
+            Console.WriteLine(
+                    "id: " + id + " " +
+                    "Type_Name: " + type + " " +
+                    "Power: " + power + " " +
+                    "Country: " + country + " " +
+                    "Capacity people: " + capacity_people + " " +
+                    "Capacity fuel: " + capacity_fuel + " ");
         }
     }
 }
