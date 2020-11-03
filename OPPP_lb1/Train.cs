@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace OPPP_lb1
 {
-    /// <summary>
-    /// Наследуемый класс -> Транспорт
-    /// </summary>
-    class Truck : Field
+    class Train: Field
     {
-        public string capacity_lifting { get; private set; }
+        public string capacity_people { get; private set; }
 
-        public Truck(int id, string type, string power, string country, string capacity_fuel, string Capacity_lifting) 
+        public Train(int id, string type, string power, string country, string capacity_fuel, string Capacity_people) 
             : base(id, type, power, country, capacity_fuel)
         {
-            capacity_lifting = Capacity_lifting;
+            capacity_people = Capacity_people;
         }
         public override void Show(int id)
         {
@@ -25,7 +22,7 @@ namespace OPPP_lb1
                     "Type_Name: " + type + " " +
                     "Power: " + power + " " +
                     "Country: " + country + " " +
-                    "Capacity lifting: " + capacity_lifting + " " +
+                    "Capacity people: " + capacity_people + " " +
                     "Capacity fuel: " + capacity_fuel + " ");
         }
     }

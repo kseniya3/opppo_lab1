@@ -11,20 +11,24 @@ namespace OPPP_lb1
     /// </summary>
     public class Field
     {
-        public string capacity { get; private set; }
+        public int id { get; private set; }
+        public string type { get; private set; }
         public string power { get; private set; }
         public string country { get; private set; }
+        public string capacity_fuel { get; private set; }
 
-        public Field(string Capacity, string Power, string Country)
+        public Field(int _id, string Type, string Power, string Country, string Capacity_fuel)
         {
-            capacity = Capacity;
+            id = _id;
+            type = Type;
             power = Power;
             country = Country;
+            capacity_fuel = Capacity_fuel;
         }
 
         public virtual void Show(int id)
         {
-            
+
         }
     }
 }

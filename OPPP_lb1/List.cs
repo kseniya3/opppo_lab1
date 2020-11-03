@@ -26,7 +26,8 @@ namespace OPPP_lb1
         public void Add(Field value)
         {
             if (value == null){
-                throw new Exception("null value");
+                return;
+               //throw new Exception("null value");
             }
 
             if (head == null){
@@ -59,13 +60,19 @@ namespace OPPP_lb1
             while (temp > 0){
                 //TODO: Вынести вывод информации в поле(Field)
                 //TODO: Выводить имя сущности.
+
+
+                /*
                 Console.WriteLine(
                     "Type_Name: " +
                     "Number: " + temp + " " +
                     "Capacity: " + tempHead.field.capacity + " " +
                     "Power: " + tempHead.field.power + " " +
                     "Country: " + tempHead.field.country + " ");
+                */
 
+                //tempHead.field.Show(count - temp);
+                tempHead.field.Show(tempHead.field.id);
                 tempHead = tempHead.next;
                 temp--;
             }

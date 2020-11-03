@@ -29,14 +29,19 @@ namespace OPPP_lb1
 
             if (type == "Truck")
             {
-
                 try
                 {
+                    if (Int32.Parse(item["power"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_lifting"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0) return null;
+
                     return new Truck(
-                        item["capacity"].ToString(),
+                        Int32.Parse(item["id"].ToString()),
+                        item["type"].ToString(),
                         item["power"].ToString(),
                         item["country"].ToString(),
-                        Int32.Parse(item["id"].ToString())
+                        item["capacity_lifting"].ToString(),
+                        item["capacity_fuel"].ToString()
                         );
                 }
                 catch
@@ -47,14 +52,42 @@ namespace OPPP_lb1
 
             if (type == "Bus")
             {
-
                 try
                 {
+                    if (Int32.Parse(item["power"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_people"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0) return null;
+
                     return new Bus(
-                        item["capacity"].ToString(),
+                        Int32.Parse(item["id"].ToString()),
+                        item["type"].ToString(),
                         item["power"].ToString(),
                         item["country"].ToString(),
-                        Int32.Parse(item["id"].ToString())
+                        item["capacity_people"].ToString(),
+                        item["capacity_fuel"].ToString()
+                        );
+                }
+                catch
+                {
+                    throw new Exception("wrong cycle item");
+                }
+            }
+
+            if (type == "Train")
+            {
+                try
+                {
+                    if (Int32.Parse(item["power"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_people"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0) return null;
+
+                    return new Train(
+                        Int32.Parse(item["id"].ToString()),
+                        item["type"].ToString(),
+                        item["power"].ToString(),
+                        item["country"].ToString(),
+                        item["capacity_people"].ToString(),
+                        item["capacity_fuel"].ToString()
                         );
                 }
                 catch
@@ -65,5 +98,6 @@ namespace OPPP_lb1
 
             return null;
         }
+
     }
 }
