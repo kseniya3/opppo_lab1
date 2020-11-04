@@ -11,7 +11,7 @@ Requirements:
 
 <a name='assembly'></a>
 # UML Diagram
-![alt text](https://github.com/kseniya3/opppo_lab1/blob/main/OPPP_lb1/Documentation/Uml.png)
+![alt text](https://github.com/kseniya3/opppo_lab1/blob/main/OPPP_lb1/Documentation/Uml v.2.png)
 
 <a name='assembly'></a>
 # Documentation
