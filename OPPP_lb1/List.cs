@@ -127,12 +127,12 @@ namespace OPPP_lb1
         /// <summary>
         /// Функция удаление объектов по типу.
         /// </summary>
-        public void Remove(string num)
+        public void Remove(string type)
         {
             Node tempHead = head;
             for (int i = 0; i < count; i++)
             {
-                if (tempHead.field.GetType().Name == num)
+                if (tempHead.field.GetType().Name == type)
                 {
                     if (i == 0)
                     {
