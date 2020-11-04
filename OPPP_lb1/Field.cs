@@ -30,5 +30,10 @@ namespace OPPP_lb1
         {
 
         }
+
+        public virtual int GetNum()
+        {
+            return id;
+        }
     }
 }
