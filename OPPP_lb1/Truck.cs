@@ -11,9 +11,9 @@ namespace OPPP_lb1
     /// </summary>
     class Truck : Field
     {
-        public string capacity_lifting { get; private set; }
+        public int capacity_lifting { get; private set; }
 
-        public Truck(int id, string type, string power, string country, string capacity_fuel, string Capacity_lifting) 
+        public Truck(int id, string type, int power, string country, int capacity_fuel, int Capacity_lifting) 
             : base(id, type, power, country, capacity_fuel)
         {
             capacity_lifting = Capacity_lifting;

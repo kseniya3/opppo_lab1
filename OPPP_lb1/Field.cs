@@ -13,11 +13,11 @@ namespace OPPP_lb1
     {
         public int id { get; private set; }
         public string type { get; private set; }
-        public string power { get; private set; }
+        public int power { get; private set; }
         public string country { get; private set; }
-        public string capacity_fuel { get; private set; }
+        public int capacity_fuel { get; private set; }
 
-        public Field(int _id, string Type, string Power, string Country, string Capacity_fuel)
+        public Field(int _id, string Type, int Power, string Country, int Capacity_fuel)
         {
             id = _id;
             type = Type;

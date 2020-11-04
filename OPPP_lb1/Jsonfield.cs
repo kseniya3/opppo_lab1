@@ -41,10 +41,10 @@ namespace OPPP_lb1
                     return new Truck(
                         Int32.Parse(item["id"].ToString()),
                         item["type"].ToString(),
-                        item["power"].ToString(),
+                        Int32.Parse(item["power"].ToString()),
                         item["country"].ToString(),
-                        item["capacity_lifting"].ToString(),
-                        item["capacity_fuel"].ToString()
+                        Int32.Parse(item["capacity_lifting"].ToString()),
+                        Int32.Parse(item["capacity_fuel"].ToString())
                         );
                 }
                 catch
@@ -64,10 +64,10 @@ namespace OPPP_lb1
                     return new Bus(
                         Int32.Parse(item["id"].ToString()),
                         item["type"].ToString(),
-                        item["power"].ToString(),
+                        Int32.Parse(item["power"].ToString()),
                         item["country"].ToString(),
-                        item["capacity_people"].ToString(),
-                        item["capacity_fuel"].ToString()
+                        Int32.Parse(item["capacity_people"].ToString()),
+                        Int32.Parse(item["capacity_fuel"].ToString())
                         );
                 }
                 catch
@@ -87,10 +87,10 @@ namespace OPPP_lb1
                     return new Train(
                         Int32.Parse(item["id"].ToString()),
                         item["type"].ToString(),
-                        item["power"].ToString(),
+                        Int32.Parse(item["power"].ToString()),
                         item["country"].ToString(),
-                        item["capacity_people"].ToString(),
-                        item["capacity_fuel"].ToString()
+                        Int32.Parse(item["capacity_people"].ToString()),
+                        Int32.Parse(item["capacity_fuel"].ToString())
                         );
                 }
                 catch

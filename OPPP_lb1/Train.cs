@@ -8,9 +8,9 @@ namespace OPPP_lb1
 {
     class Train: Field
     {
-        public string capacity_people { get; private set; }
+        public int capacity_people { get; private set; }
 
-        public Train(int id, string type, string power, string country, string capacity_fuel, string Capacity_people) 
+        public Train(int id, string type, int power, string country, int capacity_fuel, int Capacity_people) 
             : base(id, type, power, country, capacity_fuel)
         {
             capacity_people = Capacity_people;
