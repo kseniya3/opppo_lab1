@@ -32,8 +32,8 @@ namespace OPPP_lb1
                 try
                 {
                     if (Int32.Parse(item["power"].ToString()) <= 0) return null;
-                    if (Int32.Parse(item["capacity_lifting"].ToString()) <= 0) return null;
-                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_lifting"].ToString()) <= 0 || Int32.Parse(item["capacity_lifting"].ToString()) >= 1000) return null;
+                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0 || Int32.Parse(item["capacity_fuel"].ToString()) >= 300) return null;
 
                     return new Truck(
                         Int32.Parse(item["id"].ToString()),
@@ -55,8 +55,8 @@ namespace OPPP_lb1
                 try
                 {
                     if (Int32.Parse(item["power"].ToString()) <= 0) return null;
-                    if (Int32.Parse(item["capacity_people"].ToString()) <= 0) return null;
-                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_people"].ToString()) <= 0 || Int32.Parse(item["capacity_people"].ToString()) >= 150) return null;
+                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0 || Int32.Parse(item["capacity_fuel"].ToString()) >= 150) return null;
 
                     return new Bus(
                         Int32.Parse(item["id"].ToString()),
@@ -78,8 +78,8 @@ namespace OPPP_lb1
                 try
                 {
                     if (Int32.Parse(item["power"].ToString()) <= 0) return null;
-                    if (Int32.Parse(item["capacity_people"].ToString()) <= 0) return null;
-                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0) return null;
+                    if (Int32.Parse(item["capacity_people"].ToString()) <= 0 || Int32.Parse(item["capacity_people"].ToString()) >= 1000) return null;
+                    if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0 || Int32.Parse(item["capacity_fuel"].ToString()) >= 1000) return null;
 
                     return new Train(
                         Int32.Parse(item["id"].ToString()),

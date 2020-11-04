@@ -1,5 +1,13 @@
 ﻿[
   {
+    "id": 7,
+    "type": "Bus",
+    "power": 57,
+    "country": "Sierra Leone",
+    "capacity_people": 32,
+    "capacity_fuel": 85
+  },
+  {
     "id": 1,
     "type": "Truck",
     "power": 82,
@@ -46,14 +54,6 @@
     "country": "Tanzania, United Republic of",
     "capacity_people": 5,
     "capacity_fuel": 35
-  },
-  {
-    "id": 7,
-    "type": "Bus",
-    "power": 157,
-    "country": "Sierra Leone",
-    "capacity_people": 32,
-    "capacity_fuel": 285
   },
   {
     "id": 8,

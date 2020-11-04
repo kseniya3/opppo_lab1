@@ -18,6 +18,16 @@ namespace OPPP_lb1
 
             _list.Show();
 
+
+            Console.WriteLine("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+
+            //_list.Sort();
+            //_list.Show();
+
+            Console.WriteLine("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+            _list.Remove("Truck");
+            _list.Show();
+
             Console.WriteLine("To EXIT -> click Enter");
             Console.ReadLine();
         }
