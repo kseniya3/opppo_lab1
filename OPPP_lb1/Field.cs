@@ -26,12 +26,17 @@ namespace OPPP_lb1
             capacity_fuel = Capacity_fuel;
         }
 
+        /// <summary>
+        /// Функция для отображения.
+        /// </summary>
         public virtual void Show(int id)
         {
 
         }
-
-        public virtual int GetNum()
+        /// <summary>
+        /// Функция для получения id.
+        /// </summary>
+        public virtual int GetId()
         {
             return id;
         }

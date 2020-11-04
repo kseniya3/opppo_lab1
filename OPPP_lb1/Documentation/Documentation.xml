@@ -9,9 +9,25 @@
             Наследуемый класс -> Автобус
             </summary>
         </member>
+        <member name="M:OPPP_lb1.Bus.Show(System.Int32)">
+            <summary>
+            Функция для отображения.
+            </summary>
+            /// <param name="id"></param>
+        </member>
         <member name="T:OPPP_lb1.Field">
             <summary>
             Обобщающий класс. Класс содержимого элемента односвязного списка
+            </summary>
+        </member>
+        <member name="M:OPPP_lb1.Field.Show(System.Int32)">
+            <summary>
+            Функция для отображения.
+            </summary>
+        </member>
+        <member name="M:OPPP_lb1.Field.GetId">
+            <summary>
+            Функция для получения id.
             </summary>
         </member>
         <member name="M:OPPP_lb1.Jsonfield.jsonfield(Newtonsoft.Json.Linq.JToken)">
@@ -43,15 +59,41 @@
             </summary>
             <param name="path"></param>
         </member>
+        <member name="M:OPPP_lb1.List.Sort">
+            <summary>
+            Функция для сортировки.
+            </summary>
+        </member>
+        <member name="M:OPPP_lb1.List.getPosition(System.Int32)">
+            <summary>
+            Функция для получения позиции элемента в списке.
+            </summary>
+        </member>
+        <member name="M:OPPP_lb1.List.Remove(System.String)">
+            <summary>
+            Функция удаление объектов по типу.
+            </summary>
+        </member>
         <member name="T:OPPP_lb1.Node">
             <summary>
             Класс элемента односвязного списка
+            </summary>
+        </member>
+        <member name="T:OPPP_lb1.Program">
+            <summary>
+            Main
             </summary>
         </member>
         <member name="T:OPPP_lb1.Truck">
             <summary>
             Наследуемый класс -> Транспорт
             </summary>
+        </member>
+        <member name="M:OPPP_lb1.Truck.Show(System.Int32)">
+            <summary>
+            Функция для отображения.
+            </summary>
+            /// <param name="id"></param>
         </member>
     </members>
 </doc>

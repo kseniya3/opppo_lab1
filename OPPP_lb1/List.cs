@@ -86,17 +86,20 @@ namespace OPPP_lb1
             }
         }
 
+        /// <summary>
+        /// Функция для сортировки.
+        /// </summary>
         public void Sort()
         {
             for (int i = 0; i < count; i++)
             {
                 for(int j = 0; j < count; j++)
                 {
-                    Node previous = getByNumPosition(i);
-                    Node next = getByNumPosition(j);
+                    Node previous = getPosition(i);
+                    Node next = getPosition(j);
 
-                    int previousNum = previous.field.GetNum();
-                    int nextNum = next.field.GetNum();
+                    int previousNum = previous.field.GetId();
+                    int nextNum = next.field.GetId();
                     if (previousNum < nextNum)
                     {
                         if (previous != null && next != null)
@@ -105,7 +108,11 @@ namespace OPPP_lb1
                 }
             }
         }
-        public Node getByNumPosition(int i)
+
+        /// <summary>
+        /// Функция для получения позиции элемента в списке.
+        /// </summary>
+        public Node getPosition(int i)
         {
             if (i < count && i >= 0)
             {
@@ -117,6 +124,9 @@ namespace OPPP_lb1
             else return null;
         }
 
+        /// <summary>
+        /// Функция удаление объектов по типу.
+        /// </summary>
         public void Remove(string num)
         {
             Node tempHead = head;
@@ -132,7 +142,7 @@ namespace OPPP_lb1
                     }
                     else
                     {
-                        Node prev = getByNumPosition(i - 1);
+                        Node prev = getPosition(i - 1);
                         prev.next = tempHead.next;
                         tempHead = prev.next;
                     }

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace OPPP_lb1
 {
+    /// <summary>
+    /// Main
+    /// </summary>
     class Program
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();

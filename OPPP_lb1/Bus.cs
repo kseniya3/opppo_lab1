@@ -18,6 +18,11 @@ namespace OPPP_lb1
         {
             capacity_people = Capacity_people;
         }
+
+        /// <summary>
+        /// Функция для отображения.
+        /// </summary>
+        /// /// <param name="id"></param>
         public override void Show(int id)
         {
             Console.WriteLine(
