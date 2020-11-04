@@ -1,4 +1,5 @@
 ﻿using System;
+using NLog;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace OPPP_lb1
 {
     class Jsonfield
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Функция для работы с json токеном
         /// </summary>
@@ -24,7 +27,7 @@ namespace OPPP_lb1
             }
             catch
             {
-                throw new Exception("wrong type");
+                logger.Error("Input data is of the wrong type!");
             }
 
             if (type == "Truck")
@@ -46,7 +49,7 @@ namespace OPPP_lb1
                 }
                 catch
                 {
-                    throw new Exception("wrong cycle item");
+                    logger.Error("Input data Truck is off the wrong type!");
                 }
             }
 
@@ -69,7 +72,7 @@ namespace OPPP_lb1
                 }
                 catch
                 {
-                    throw new Exception("wrong cycle item");
+                    logger.Error("Input data Bus is off the wrong type!");
                 }
             }
 
@@ -92,7 +95,7 @@ namespace OPPP_lb1
                 }
                 catch
                 {
-                    throw new Exception("wrong cycle item");
+                    logger.Error("Input data Train is off the wrong type!");
                 }
             }
 

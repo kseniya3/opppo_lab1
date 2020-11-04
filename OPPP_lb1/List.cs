@@ -1,4 +1,5 @@
 ﻿using System;
+using NLog;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace OPPP_lb1
     /// </summary>
     class List
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         private Node head;
         private Node tail;
         public int count { get; private set; }
@@ -28,8 +31,9 @@ namespace OPPP_lb1
         {
             if (value == null){
                 count--;
+
+                logger.Error("The field has a null value!");
                 return;
-               //throw new Exception("null value");
             }
 
             if (head == null){
@@ -139,53 +143,5 @@ namespace OPPP_lb1
                 tempHead = tempHead.next;
             }
         }
-
-        public bool Remove2(Node data)
-        {
-            Node current = head;
-            Node previous = null;
-
-            //if (IsEmpty) return false;
-
-            do
-            {
-                if (current.field.Equals(data))
-                {  
-                    // Если узел в середине или в конце
-                    if (previous != null)
-                    {
-                        // убираем узел current, теперь previous ссылается не на current, а на current.Next
-                        previous.next = current.next;
-
-                        // Если узел последний,
-                        // изменяем переменную tail
-                        if (current == tail)
-                            tail = previous;
-                    }
-                    else // если удаляется первый элемент
-                    {
-                        // если в списке всего один элемент
-                        if (count == 1)
-                        {
-                            head = tail = null;
-                        }
-                        else
-                        {
-                            head = current.next;
-                            tail.next = current.next;
-                        }
-                    }
-                    count--;
-                    return true;
-                }
-                previous = current;
-                current = current.next;
-
-            } while (current != head);
-
-            return false;
-        }
-
-
     }
 }
