@@ -7,11 +7,24 @@ Organization of the software design process. Read objects and display content on
 Requirements:
   1. python
   2. Install library: pip install pycountry
-  3. Start script: python createJsonData.py --type [argument] --range_int_min [argument] --range_int_max [argument] --count [argument]
+      ```python
+      pip install pycountry
+      ```
+  3. Start script: 
+      ```python
+      python createJsonData.py --type [argument] --range_int_min [argument] --range_int_max [argument] --count [argument]
+      ```
+
+## Running the program.
+Requirements:
+  1. running the program through the console Window:
+  ```python
+      OPPP_lb1.exe [name_file]
+  ```
 
 <a name='assembly'></a>
 # UML Diagram
-![alt text](https://github.com/kseniya3/opppo_lab1/blob/main/OPPP_lb1/Documentation/Uml v.2.png)
+![alt text](https://github.com/kseniya3/opppo_lab1/blob/main/OPPP_lb1/Documentation/Uml%20v.2.png)
 
 <a name='assembly'></a>
 # Documentation
