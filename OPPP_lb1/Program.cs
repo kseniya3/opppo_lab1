@@ -1,5 +1,7 @@
 ﻿using NLog;
 using System;
+using System.Diagnostics;
+using System.Threading;
 
 namespace OPPP_lb1
 {
@@ -13,10 +15,14 @@ namespace OPPP_lb1
         {
             try
             {
+                Stopwatch stopwatch = new Stopwatch();
+
+                stopwatch.Start();
+
                 List _list = new List();
 
-                _list.addDataFromFile("C:/Users/Kozlo/source/repos/OPPP_lb1/OPPP_lb1/Object.json");
-                //_list.addDataFromFile(args[0]);
+                //_list.addDataFromFile("C:/Users/Kozlo/source/repos/OPPP_lb1/OPPP_lb1/Object.json");
+                _list.addDataFromFile(args[0]);
                 _list.Show();
 
                 Console.WriteLine("---------------------------------------");
@@ -33,8 +39,9 @@ namespace OPPP_lb1
                 _list.Remove("Truck");
                 _list.Show();
 
-                Console.WriteLine("To EXIT -> click Enter");
-                Console.ReadLine();
+                stopwatch.Stop();
+
+                Console.WriteLine("Время(миллисекунды): " + stopwatch.ElapsedMilliseconds);
             }
             catch (Exception exeption)
             {
