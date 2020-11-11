@@ -21,8 +21,8 @@ namespace OPPP_lb1
 
                 List _list = new List();
 
-                //_list.addDataFromFile("C:/Users/Kozlo/source/repos/OPPP_lb1/OPPP_lb1/Object.json");
-                _list.addDataFromFile(args[0]);
+                _list.addDataFromFile("C:/Users/Kozlo/source/repos/OPPP_lb1/OPPP_lb1/Object.json");
+                //_list.addDataFromFile(args[0]);
                 _list.Show();
 
                 Console.WriteLine("---------------------------------------");
@@ -36,12 +36,15 @@ namespace OPPP_lb1
                 Console.WriteLine("Удаление всех объектов определенного типа");
                 Console.WriteLine("---------------------------------------");
 
-                _list.Remove("Truck");
+                _list.Remove(_list.RemovdParam("11"));
+               // _list.Remove("Truck");
                 _list.Show();
 
                 stopwatch.Stop();
 
                 Console.WriteLine("Время(миллисекунды): " + stopwatch.ElapsedMilliseconds);
+
+                Console.ReadLine();
             }
             catch (Exception exeption)
             {

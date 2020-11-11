@@ -69,11 +69,6 @@
             Функция для получения позиции элемента в списке.
             </summary>
         </member>
-        <member name="M:OPPP_lb1.List.Remove(System.String)">
-            <summary>
-            Функция удаление объектов по типу.
-            </summary>
-        </member>
         <member name="T:OPPP_lb1.Node">
             <summary>
             Класс элемента односвязного списка

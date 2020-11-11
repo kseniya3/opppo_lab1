@@ -118,34 +118,70 @@ namespace OPPP_lb1
             else return null;
         }
 
-        /// <summary>
-        /// Функция удаление объектов по типу.
-        /// </summary>
-        public void Remove(string type)
+
+        public bool Remove(Node theSameNode)
         {
             Node tempHead = head;
-            for (int i = 0; i < count; i++)
+            Node previous = null;
+
+            if (theSameNode == null) return false;
+
+            do
             {
-                if (tempHead.field.GetType().Name == type)
+                if ((tempHead.field == theSameNode.field))
                 {
-                    if (i == 0)
+                    if (previous != null)
                     {
-                        Node tmp_head = head.next;
-                        head = tmp_head;
-                        tempHead = tempHead.next;
+                        previous.next = tempHead.next;
+
+                        if (tempHead == tail)
+                            tail = previous;
                     }
                     else
                     {
-                        Node prev = getPosition(i - 1);
-                        prev.next = tempHead.next;
-                        tempHead = prev.next;
+                        if (count == 1)
+                        {
+                            head = tail = null;
+                        }
+                        else
+                        {
+                            head = tempHead.next;
+                            tail.next = tempHead.next;
+                        }
                     }
                     count--;
-                    i--;
-                    continue;
+                    return true;
                 }
+                previous = tempHead;
                 tempHead = tempHead.next;
+
+            } while (tempHead != head);
+
+            return false;
+        }
+
+        public Node RemovdParam(string param)
+        {
+            Node temphead = head;
+
+            int temp = count;
+            while (temp > 0)
+            {
+
+                if(Char.IsNumber(param, 0))
+                {
+                    if (temphead.field.id == Int32.Parse(param)) return temphead;
+                }
+                else
+                {
+                    if (temphead.field.type == param.ToString()) return temphead;
+                }
+
+                temphead = temphead.next;
+                temp--;
             }
+
+            return null;
         }
     }
 }
