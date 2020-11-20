@@ -16,6 +16,7 @@ namespace OPPP_lb1
         static public Field jsonfield(JToken item)
         {
             string type = "";
+
             try
             {
                 type = item["type"].ToString();
@@ -29,6 +30,25 @@ namespace OPPP_lb1
             {
                 try
                 {
+                    try
+                    {
+                        int.Parse(item["id"].ToString());
+                    }
+                    catch (FormatException e)
+                    {
+                        return null;
+                    }
+
+                    /*
+                    int number;
+                    string str = item["id"].ToString();
+                    //if (Convert.ToInt32(Int32.Parse(item["id"].ToString())) return null;
+                    bool isNum = (int.TryParse(str, out number));//return null;
+                    if (!isNum) return null;
+
+
+                    if (Int32.Parse(item["id"].ToString()) % 1 != 0) return null;
+                    */
                     if (Int32.Parse(item["power"].ToString()) <= 0) return null;
                     if (Int32.Parse(item["capacity_lifting"].ToString()) <= 0 || Int32.Parse(item["capacity_lifting"].ToString()) >= 1000) return null;
                     if (Int32.Parse(item["capacity_fuel"].ToString()) <= 0 || Int32.Parse(item["capacity_fuel"].ToString()) >= 300) return null;
